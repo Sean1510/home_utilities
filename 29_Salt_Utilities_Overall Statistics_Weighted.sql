@@ -2,8 +2,8 @@ CREATE VIEW "Home"."29_Salt_Utilities_Overall Statistics_Weighted" AS
 WITH weighted_stats AS (
   SELECT
     "Utility Type",
-    SUM("Covered by Sean(=❶/❷*❸/3)") / SUM("❸Days") AS weighted_mean,
-    SUM("❸Days") AS total_weight
+    SUM("Covered by Sean(=❶/❷*❸/3)") / SUM("❸Days Covered by Sean") AS weighted_mean,
+    SUM("❸Days Covered by Sean") AS total_weight
   FROM
     "Home"."29_Salt_Utilities_View_Own"
   GROUP BY
@@ -13,7 +13,7 @@ weighted_variance AS (
   SELECT
     v."Utility Type",
     SUM(
-      (("Amount Per Day" - ws.weighted_mean) ^ 2) * ("❸Days")
+      (("Amount Per Day" - ws.weighted_mean) ^ 2) * ("❸Days Covered by Sean")
     ) / ws.total_weight AS weighted_variance
   FROM
     "Home"."29_Salt_Utilities_View_Own" v
