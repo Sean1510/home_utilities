@@ -19,7 +19,7 @@ SELECT
       ) / (3)::numeric
     ),
     2
-  ) AS "Covered by Sean(=a/b*c/3)",
+  ) AS "Amount Covered by Sean(=a/b*c/3)",
   "Paid Date"
 FROM
   "Home"."29_Salt_Utilities"
