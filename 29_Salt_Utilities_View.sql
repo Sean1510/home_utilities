@@ -22,4 +22,7 @@ SELECT
   ) AS "Covered by Sean(=a/b*c/3)",
   "Paid Date"
 FROM
-  "Home"."29_Salt_Utilities";
+  "Home"."29_Salt_Utilities"
+ORDER BY
+  "Paid Date",
+  "Utility Type";
