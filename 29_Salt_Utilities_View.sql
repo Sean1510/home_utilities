@@ -25,4 +25,5 @@ FROM
   "Home"."29_Salt_Utilities"
 ORDER BY
   "Paid Date",
-  "Utility Type";
+  "Utility Type",
+  "Billing From";
