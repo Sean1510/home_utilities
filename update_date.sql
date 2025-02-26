@@ -9,6 +9,4 @@ SET
         WHEN "Date Starting To Split" IS NULL 
              AND "Same With Billing From?" = 1 THEN "Billing From"
         ELSE "Date Starting To Split"
-    END
-WHERE "Date Ending To Split" IS NULL 
-   OR "Date Starting To Split" IS NULL;
+    END;
